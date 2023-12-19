@@ -86,7 +86,7 @@ def schema_for_column(c):
 
     result = Schema(inclusion=inclusion)
 
-    if data_type == 'bit' or column_type.startswith('tinyint(1)'):
+    if data_type == 'bit':
         result.type = ['null', 'boolean']
 
     elif data_type in BYTES_FOR_INTEGER_TYPE:
